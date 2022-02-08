@@ -1,0 +1,70 @@
+my personal access token : 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
+https://bitnami.com/ //download opensource software up and running on any platform, including your laptop, Kubernetes and all the major clouds. 
+* look at github gitignore templates and add for example python templates in .gitignore file of your project
+git config --global user.name "Javad Ghavipanjeh"
+git config --global user.email "jgh.programming@gmail.com"
+git config --global core.editor "code --wait" //define vscode as default editor
+git config --global core.autocrlf true //define end of line
+git config --global -e //open editor
+git logs/>.gitignore //add logs/ dir to gitignore file
+
+git init
+git add index.html file1.txt | git add *.txt | git add .
+git add -A //all files
+git commit -m "index changed"
+git commit -am "commit by skiping staging area"
+git status
+git ls-files //show staging area files
+git rm file1.txt *.txt //remove file both in working area and staging area
+rm file1.txt //just remove file from working area
+git rm --cache -r bin/  //remove bin dir from staging area
+git clean -fd //clean forece all untracked dir and files. there is no way to undo this command be careful
+git mv file1.txt file1.js //rename file1.txt both in working and staging area
+mv file1.txt file1.js //rename file1.txt just in working area
+git log | git log --oneline | git log --oneline --reverse //show commit log
+git show ad23vvcdd21 //show a commit detail with its hash
+git show HEAD | git show HEAD~1 //show changes on HEAD or one commit before head 
+git show HEAD~1:file1.txt //show the exact file1.txt in one before last commit
+git show ls-tree HEAD //show exact files in last commit(HEAD)
+git ls-files //show staged files
+*each commit is a complete snapshot of our project
+-----------
+git reset page1.html //return pag1 from stage
+git checkout page1.html //roleback all changes on page1 from last commit.file 1 must be untrack state
+git restore --staged file1.txt //
+git restore --source=HEAD~1 file1.txt //restore file1.txt to a commit before last one
+git diff HEAD //what changes happened compare to where HEAD is
+git diff --staged //diff for staged files
+git diff //unstaged changes
+--------------------
+git branch //show current branch
+git branch fixpages //create fixpages branch
+git checkout fixpages //switch to fixpages branch
+git merge fixpages //merge current branch(master) with fixpages branch
+git branch -d fixpages //delete fixpages branch
+----------------------------
+git clone https://github.com/jgh.programming
+git push origin master //push master to origin(https://github...)
+git pull origin master //pull from origin to master
+for authentication should enable personal access token
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+git remote add origin https://www.github.com/test-repo/  
+//add a remote to our project
+git remote -v //show remote info
+git push -u origin master
+---------------------------
+git show 1c4442ab2826dc195b93b97c302d //commitID //show a commit changes
+git tag -a v2.0 -m 'this is version 2.0' //-a : annocdate
+git tag -a v1.8 2ddfc345vgd -m 'thisis version 1.8' //tag a specific commitID
+git show v2.0 //show/.  
+git push origin --tags //push all tags to origin
+git push origin v1.8 //push v1.8 to origin
+
+
+---------------------------
+hit --help blame //get help for any command
+cat page1 //open page1
+vi page1 //edit page1 in vi
+touch pag1 //create page1
+

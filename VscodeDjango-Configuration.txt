@@ -1,0 +1,9 @@
+ mkdir storefront
+py -3 -m venv .venv or
+ pip install virtualenv and virtualenv venv 
+venv\scripts\activate.bat
+pip install django
+django-admin startproject stoefront .
+cd ..\PyShop : go to project path
+python manage.py migrate
+python manage.py runserver
